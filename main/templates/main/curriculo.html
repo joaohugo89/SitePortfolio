@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+    
+
+    <nav class = "second-navbar">
+        <a href="#experiences" class="nav-links">Experiências</a>
+        <a href="#who-am-i" class="nav-links">Quem sou eu</a>
+        <a href="#my-projects" class="nav-links">Meus projetos</a>
+        <a href="#contact" class="nav-links">Contato</a>
+    </nav>
+
+    <main>
+        <section class="first-section">
+            <div>
+                <h1>Eu sou o <br><strong>Joao Hugo Soares</strong></h1>
+                <p>Tenho 26 anos, sou dev <strong>Full Stack</strong> freelancer, <strong>Hacker nas horas vagas</strong> e <strong>Universitário.</strong></p>
+                <a class="btn-actions link-action" href="#contact">Saber mais</a>
+                <a class="btn-actions link-action" href = "{% static '/files/Curriculo (Unifei 2023).docx' %}"> Download curriculo</a>  
+            </div>
+
+            <div class="box-img-main">
+                <img class="img-profile" src="{% static '/images/perfil.jpeg' %}" alt="Joao Hugo - Perfil">
+            </div>
+        </section>
+
+        <section id="experiences" class="second-section">
+            <h2 class="title">Experiências</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>MySQL</li>
+                <li>Python</li>
+            </ul>
+        </section>
+
+        <section id="who-am-i" class="third-section">
+            <h2 class="title">Quem sou eu ?</h2>
+            <div>
+                <img class="img-who-am-i" src="{% static '/images/perfil2.jpeg' %}" alt="Joao Hugo - Foto">
+                <p>Meu nome é <strong>Joao Hugo Soares</strong>, estou cursando <strong>Engenharia da Computação</strong> na Universidade Federal de Itajuba, atualmente tento começar a trabalhar como <strong>freelancer</strong> . Nas horas livres quero aumentar o meu conhecimento em <strong>Cybersegurança</strong> e ser <strong>Full-Stack developer</strong></p>
+            </div>
+        </section>
+
+        <section id="my-projects" class="fourth-section">
+            <h2 class="title">Meus projetos</h2>
+            <p id="loading">Carregando...</p>
+            <div id="my-projects-list"></div>
+        </section>
+    </main>
+{% endblock %}
